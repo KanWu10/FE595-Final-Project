@@ -5,7 +5,7 @@ Investors' sentiment is one of the most influenced factors affecting the stock p
 
 ### Steps:
 We divided the whole project into three steps and each teammate is in charge of one step.
-1. Crawling the news headlines of a given stock in a period(we choose 2015-1-1 to 2017-12-31).
+1. Crawling the news headlines of given stocks in a period(we choose 2015-1-1 to 2017-12-31).
 2. Doing the sentiment analysis of each headline and observe the stock trend after the news was published.
 3. Using different machine learning models to predict the stock price. We will choose sentiment score as a predictor and do the model fit, and then judge the performance of fit by the score of fit.
 
