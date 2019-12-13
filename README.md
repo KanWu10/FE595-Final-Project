@@ -14,14 +14,12 @@ We divided the whole project into three steps and each teammate is in charge of 
 We attempted to use the following websites: <reuters.com> and <finance.yahoo.com>. However, only reuters.com was accessible for large-scale scraping, all other websites either blocked the scraping request , or did not properly organize news into corresponding stocks. Thus, we used only www.reuters.com  news article.
 Another reason why we choose this data is that the scope of the text is relatively large, which also increases the reliability and rationality of our subsequent emotional analysis.
 #### Step 2: (by Shijie Cai)
-
-
-
-
-
-
-
-
+Data processing
+For data accuracy，we did the following steps:
+1. If the news title does not contain the company’s name, it means the news has nothing to do with the company. So, we give the news a score as 0. In an other word, we only analysis the news with its company’s name.
+2. If there are several news items in a day, the average score is counted.
+3. If there is no corresponding stock price on that day of the news (maybe weekend or holiday), the score is 0.
+Brief Correlation analysis（sentiment score and stock price change）
 #### Step 3: (by Kan Wu)
 In this step I used two methods to do the prediction: linear regression and support vector regression.
 And these predictors were chosen: "Adjusted close price", "Volume", "HL_PCT( (High price - Low price)/ Adjusted price)", "PCT_change( (Close price - Open price)/ Adjusted close price)", "Sentiment".
@@ -29,13 +27,10 @@ To do the Reression, the dataset needs to be split into training set and test se
 
 
 ### Results:
-1. Logistic regression.
 
-
-
-
-
-2. Linear regression.\
+1. Qualitative analysis：we set stock price increasing as 1 and decreasing as -1,using a scatter plot to see the relationship between sentiment score and stock price. The result is not significant as we can see The scores of each stage are evenly distributed on the two influences of -1 and 1.
+2. Quantitative analysis：The correlation coefficient is 0.064 is quite low, and it can be seen from the images that the correlation is not large.
+3. Linear regression.\
 Due to some issues of transition of sentiment data, there was no enough time to process the stock and variables data to match the date of real sentiment data. Therefore, unfortunately, both of the two regressions were not excuted on the real sentiment 
 data. However codes for processing the variable data and doing the linear regression and support vector regression were still uploaded.
 
